@@ -1,0 +1,217 @@
+:root {
+    --white: #ffffff;
+    --green: #7ca043;
+    --dblue: #18242e;
+    --blue: #294058;
+    --yellow: #dfe229;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: inherit;
+    font-size: 70%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--white);
+}
+h1 {
+    /**font-family: ;   Add font    **/
+    font-weight: 500;
+    text-align: center;
+}
+h1 {
+    font-size: 5rem;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg,
+        var(--dblue) 0%,
+        var(--blue) 100%
+    );
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    /**z-index: ;  /** look for the ideal z-index  **/
+}
+.list {
+    display: flex;
+}
+/**@media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+}
+.list {
+    margin: 0;
+}**/
+.list a {
+    display: block;
+    font-size: 2rem;
+    padding: 2.3rem;
+}
+.list a:hover {
+    background: linear-gradient(-90deg,
+        var(--dblue) 0%, 
+        var(--blue) 100%
+    );
+}
+.welcome-section {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(45deg, #294058 0%, #18242e 100%); 
+}
+.welcome-section > p {
+    font-size: 2.7rem;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--green);
+}
+.projects {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: linear-gradient(45deg, #18242e 0%, #294058 100%);
+}
+.projects-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2 solid var(--white);
+}
+/**@media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+}**/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+/**@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}**/
+.project {
+    background: var(--green);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+.console {
+    color: var(--green);
+    transition: color 0.3s ease-out;
+}
+.project:hover .console {
+    color: var(--yellow);
+}
+.project-img {
+    width: 100%;
+    height: cal(100% - 5rem);
+    object-fit: cover;
+}
+.project-name {
+    font-size: 1.8rem;
+    padding: 2rem 0.5rem;
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 100vh;
+    padding: 0 2rem;
+    background: linear-gradient(45deg, #294058 0%, #18242e 100%);
+}
+.contact-header > h2{
+    font-size: 4rem;
+}
+/**@media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+}**/
+.contact-header > p{
+    font-style: italic;
+    padding-top: 1em;
+}
+.links {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 10rem;
+    flex-wrap: wrap;
+}
+.details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.details:hover {
+    transform: translateY(8px);
+}
+footer {
+    font-weight: 300;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background: linear-gradient(45deg, 
+        var(--dblue) 0%, 
+        var(--blue) 100%
+    );
+    border-top: 4px solid var(--green);
+}
+footer > p {
+    margin: 1rem;
+}
+/**footer i {
+    vertical-align: middle;
+}
+/**@media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+}
